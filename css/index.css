@@ -47,10 +47,13 @@ html,
 *******************/
 #header {
     width: 100%;
-    display: flex;
+    /* display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
 }
 #header-logo {
     font-size: 16px;
@@ -63,11 +66,46 @@ html,
     background-color: transparent;
     border: none;
     display: flex;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
 }
 #header-menuIcons-close {
     display: none;
+}
+#header-menuIcons-open.show {
+    display: none;
+}
+#header-menuIcons-close.show {
+    display: block;
+}
+#nav {
+    display: none;
+}
+#nav.show {
+    display: block;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    text-align: end;
+    margin-top: 20px;
+}
+#nav-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.nav-links {
+    color: var(--content-color);
+    font-size: var(--content-font-size);
+    font-weight: var(--normal-content-font-weight);
+    font-family: var(--title-family-font);
+    text-decoration-line: none;
+}
+.nav-links:hover {
+    color: #000;
+    font-weight: var(--bold-content-font-weight);
 }
 
 /******************* 
