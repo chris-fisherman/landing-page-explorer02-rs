@@ -1,0 +1,30 @@
+/******************* 
+*** BASIC NORMALIZE 
+*******************/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/******************* 
+*** ROOT
+*******************/
+:root {
+    /* color */
+    --main-color: #89c5cc;
+    --content-color: #7d7987;
+    --secondary-color: #69b99d;
+
+    /* size */
+    --content-font-size: 14px;
+
+    /* weight */
+    --normal-content-font-weight: 400;
+    --bold-content-font-weight: 700;
+    --link-font-weight: 500;
+
+    /* font */
+    --title-font: "Mulish", serif;
+    --content-font: "Open Sans", serif;
+    --logo-font: "Inter", serif;
+}
