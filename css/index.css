@@ -195,9 +195,26 @@ html {
     color: var(--secondary-color);
 }
 
+
 /******************* 
 *** DESKTOP VIEW
 *******************/
+
+/******* SMALL *******/
+@media (min-width: 540px) {
+    #header-menuBtn {
+        display: none;
+    }
+    #nav {
+        display: block;
+    }
+    #nav-list {
+        flex-direction: row;
+        justify-content: end;
+        gap: 30px;
+    }
+}
+/******* MEDIUM *******/
 @media (min-width: 750px) {
     #body {
         margin: 30px auto;
@@ -212,14 +229,7 @@ html {
     #header-logo {
         font-size: 18px;
     }
-    #header-menuBtn {
-        display: none;
-    }
-    #nav {
-        display: block;
-    }
     #nav-list {
-        flex-direction: row;
         gap: 50px;
     }
     .nav-links {
@@ -240,11 +250,16 @@ html {
         grid-row-start: 1;
         grid-row-end: 3;
         text-align: start;
-        gap: 45px;
     }
     #main-bannerSection-title, 
     #main-bannerSection-link {
         align-self: start;
+    }
+}
+/******* LARGE *******/
+@media (min-width: 1020px) {
+    #main-bannerSection {
+        gap: 45px;
     }
     #main-bannerSection-title {
         font-size: 49px;
