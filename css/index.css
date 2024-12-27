@@ -60,6 +60,9 @@ html {
     text-decoration-line: none;
     color: var(--main-color);
 }
+#header-logo:hover {
+    color: var(--secondary-color);
+}
 #header-menuBtn {
     background-color: transparent;
     border: none;
@@ -111,10 +114,6 @@ html {
 *******************/
 #main {
     width: 100%;
-    /* display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px; */
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -165,6 +164,9 @@ html {
     border-radius: 4px;
     text-decoration-line: none;
 }
+#main-bannerSection-link:hover {
+    background-color: var(--main-color);
+}
 #main-bannerSection-link-text {
     color: #fff;
     font-size: var(--content-font-size);
@@ -184,6 +186,13 @@ html {
     font-size: var(--content-font-size);
     font-weight: var(--normal-content-font-weight);
     font-family: var(--content-family-font);
+}
+#footer-link {
+    color: #000;
+    text-decoration-line: none;
+}
+#footer-link:hover {
+    color: var(--secondary-color);
 }
 
 /******************* 
