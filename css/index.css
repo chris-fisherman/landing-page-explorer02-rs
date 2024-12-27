@@ -47,10 +47,6 @@ html {
 *******************/
 #header {
     width: 100%;
-    /* display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center; */
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
@@ -115,20 +111,33 @@ html {
 *******************/
 #main {
     width: 100%;
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    gap: 30px; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 30px; 
     text-align: center;
 }
 #main-heroImg {
     width: 70%;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin: 0 auto;
 }
 #main-bannerSection {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 30px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
 }
 #main-bannerSection-title {
     font-size: 28px;
@@ -156,7 +165,7 @@ html {
     border-radius: 4px;
     text-decoration-line: none;
 }
-#main-bannerSection-text {
+#main-bannerSection-link-text {
     color: #fff;
     font-size: var(--content-font-size);
     font-weight: var(--normal-content-font-weight);
@@ -184,6 +193,7 @@ html {
     #body {
         margin: 30px auto;
         padding: 30px 60px;
+        gap: 50px;
     }
     #header {
         display: flex;
@@ -204,6 +214,43 @@ html {
         gap: 50px;
     }
     .nav-links {
+        font-size: 16px;
+    }
+    #main {
+        align-items: center;
+    }
+    #main-heroImg {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+    #main-bannerSection {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        text-align: start;
+        gap: 45px;
+    }
+    #main-bannerSection-title, 
+    #main-bannerSection-link {
+        align-self: start;
+    }
+    #main-bannerSection-title {
+        font-size: 49px;
+    }
+    #main-bannerSection-link {
+        padding: 14px 32px;
+    }
+    #main-bannerSection-paragraph {
+        font-size: 16px;
+        line-height: 28px;
+    }
+    #main-bannerSection-link-text {
+        font-size: 16px;
+    }
+    #footer-text {
         font-size: 16px;
     }
 }
