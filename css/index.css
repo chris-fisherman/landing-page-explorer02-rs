@@ -31,11 +31,11 @@
 /******************* 
 *** HTML & BODY
 *******************/
-html, 
-#body {
+html {
     max-width: 100%;
-}
+} 
 #body {
+    max-width: 1200px;
     padding: 30px;
     display: flex;
     flex-direction: column;
@@ -53,7 +53,9 @@ html,
     align-items: center; */
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-
+}
+#header-logoContainer {
+    text-align: start;
 }
 #header-logo {
     font-size: 16px;
@@ -173,4 +175,35 @@ html,
     font-size: var(--content-font-size);
     font-weight: var(--normal-content-font-weight);
     font-family: var(--content-family-font);
+}
+
+/******************* 
+*** DESKTOP VIEW
+*******************/
+@media (min-width: 750px) {
+    #body {
+        margin: 30px auto;
+        padding: 30px 60px;
+    }
+    #header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    #header-logo {
+        font-size: 18px;
+    }
+    #header-menuBtn {
+        display: none;
+    }
+    #nav {
+        display: block;
+    }
+    #nav-list {
+        flex-direction: row;
+        gap: 50px;
+    }
+    .nav-links {
+        font-size: 16px;
+    }
 }
